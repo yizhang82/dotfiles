@@ -14,4 +14,4 @@ set expandtab
 set ic
 set hlsearch
 set relativenumber
-set mouse=a
+" set mouse=a
