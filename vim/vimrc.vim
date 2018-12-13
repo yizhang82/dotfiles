@@ -11,6 +11,7 @@ set et
 set tabstop=4
 set shiftwidth=4
 set expandtab
+set ruler
 set ic
 set hlsearch
 set relativenumber
