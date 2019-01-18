@@ -106,7 +106,7 @@ let g:easytags_suppress_ctags_warning = 1
 " syntax highlighting is slow in large files
 let g:easytags_auto_highlight = 0
 
-nmap <F8> :TagbarToggle<CR>
+nmap <silent> <leader>b :TagbarToggle<CR>
 
 "-------------------------------------------------------------------------------
 " Ctrl+hjkl navigation for vim window and tmux window
@@ -146,6 +146,28 @@ nmap <silent> <leader>t :NERDTreeTabsToggle<CR>
 "-------------------------------------------------------------------------------
 Plug 'ntpeters/vim-better-whitespace'
 
+"-------------------------------------------------------------------------------
+" Status bar
+"-------------------------------------------------------------------------------
+Plug 'itchyny/lightline.vim'
+
+" Magic to enable lightline
+set laststatus=2
+
+" No need to show -- INSERT -- when we have lightline
+set noshowmode
+
+" Status bar setting
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'fugitive#head'
+      \ },
+      \ }
 
 " Initialize Plug system
 call plug#end()
