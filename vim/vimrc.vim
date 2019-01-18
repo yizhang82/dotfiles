@@ -48,27 +48,51 @@ inoremap jj <ESC>
 " - Avoid using standard Vim directory names like 'Plug'
 call plug#begin('~/.vim/plugged')
 
+"-------------------------------------------------------------------------------
 " Command-T plug to fuzzy search files
+"-------------------------------------------------------------------------------
 Plug 'wincent/command-t'
-Plug 'Shougo/vimproc.vim'
 
+nmap <silent> <Leader>p <Plug>(CommandT)
+nmap <silent> <Leader>o <Plug>(CommandTTag)
+
+" Plug 'Shougo/vimproc.vim'
+" Plug 'Shougo/unite.vim'
+
+"-------------------------------------------------------------------------------
 " Automatically insert delimiters
+"-------------------------------------------------------------------------------
 Plug 'Raimondi/delimitMate'
 
+"-------------------------------------------------------------------------------
 " ack to search files
+"-------------------------------------------------------------------------------
 Plug 'mileszs/ack.vim'
 
-" ----- Working with Git ----------------------------------------------
+"-------------------------------------------------------------------------------
+" Show git diff/outline/etc
+"-------------------------------------------------------------------------------
 Plug 'airblade/vim-gitgutter'
+
+"-------------------------------------------------------------------------------
+" git commands
+"-------------------------------------------------------------------------------
 Plug 'tpope/vim-fugitive'
 
-" vim tags
+"-------------------------------------------------------------------------------
+" Async support
+"-------------------------------------------------------------------------------
 Plug 'xolox/vim-misc'
-Plug 'xolox/vim-easytags'
-Plug 'majutsushi/tagbar'
 
-" Ctrl+hjkl navigation for vim window and tmux window
-Plug 'christoomey/vim-tmux-navigator'
+"-------------------------------------------------------------------------------
+" Automatic regenerating tags
+"-------------------------------------------------------------------------------
+Plug 'xolox/vim-easytags'
+
+"-------------------------------------------------------------------------------
+" Display tag bar
+"-------------------------------------------------------------------------------
+Plug 'majutsushi/tagbar'
 
 set tags=./tags;,~/.vimtags
 
@@ -79,7 +103,16 @@ let g:easytags_dynamic_files = 2
 let g:easytags_resolve_links = 1
 let g:easytags_suppress_ctags_warning = 1
 
-"
+" syntax highlighting is slow in large files
+let g:easytags_auto_highlight = 0
+
+nmap <F8> :TagbarToggle<CR>
+
+"-------------------------------------------------------------------------------
+" Ctrl+hjkl navigation for vim window and tmux window
+"-------------------------------------------------------------------------------
+Plug 'christoomey/vim-tmux-navigator'
+
 "-------------------------------------------------------------------------------
 " A: Alternate between .h and .cpp files quickly
 "-------------------------------------------------------------------------------
@@ -88,9 +121,9 @@ Plug 'vim-scripts/a.vim'
 " Toggle files with A.vim
 nmap <silent> <leader>a :A<cr>
 
-"
+"-------------------------------------------------------------------------------
 " Toggle comments
-"
+"-------------------------------------------------------------------------------
 Plug 'tomtom/tcomment_vim'
 
 "-------------------------------------------------------------------------------
@@ -113,15 +146,6 @@ nmap <silent> <leader>t :NERDTreeTabsToggle<CR>
 "-------------------------------------------------------------------------------
 Plug 'ntpeters/vim-better-whitespace'
 
-" Command-T
-
-nmap <silent> <Leader>p <Plug>(CommandT)
-nmap <silent> <Leader>o <Plug>(CommandTTag)
-
-"-------------------------------------------------------------------------------
-" A: Alternate between .h and .cpp files quickly
-"-------------------------------------------------------------------------------
-Plug 'vim-scripts/a.vim'
 
 " Initialize Plug system
 call plug#end()
