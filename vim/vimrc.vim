@@ -48,13 +48,16 @@ inoremap jj <ESC>
 " - Avoid using standard Vim directory names like 'Plug'
 call plug#begin('~/.vim/plugged')
 
-"-------------------------------------------------------------------------------
-" Command-T plug to fuzzy search files
-"-------------------------------------------------------------------------------
-Plug 'wincent/command-t'
+" Plug 'wincent/command-t'
+"
+" nmap <silent> <Leader>p <Plug>(CommandT)
+" nmap <silent> <Leader>o <Plug>(CommandTTag)
 
-nmap <silent> <Leader>p <Plug>(CommandT)
-nmap <silent> <Leader>o <Plug>(CommandTTag)
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+
+nmap <silent> <Leader>p :Files<CR>
+nmap <silent> <Leader>b :Buffers<CR>
 
 " Plug 'Shougo/vimproc.vim'
 " Plug 'Shougo/unite.vim'
@@ -105,8 +108,6 @@ let g:easytags_suppress_ctags_warning = 1
 
 " syntax highlighting is slow in large files
 let g:easytags_auto_highlight = 0
-
-nmap <silent> <leader>b :TagbarToggle<CR>
 
 "-------------------------------------------------------------------------------
 " Ctrl+hjkl navigation for vim window and tmux window
