@@ -195,3 +195,11 @@ Plug 'vim-scripts/Align'
 
 " Initialize Plug system
 call plug#end()
+
+" Turn off syntax highlighting as it messes up the diffs
+if &diff
+    colorscheme evening
+    syntax off
+endif
+
+
