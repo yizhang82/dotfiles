@@ -4,24 +4,7 @@
 		zle accept-line
 	}
 	zle -N up_widget
-	bindkey "^k" up_widget
-
-# git
-	function git_prepare() {
-		if [ -n "$BUFFER" ];
-			then
-				BUFFER="git add -A && git commit -m \"$BUFFER\" && git push"
-		fi
-
-		if [ -z "$BUFFER" ];
-			then
-				BUFFER="git add -A && git commit -v && git push"
-		fi
-				
-		zle accept-line
-	}
-	zle -N git_prepare
-	bindkey "^g" git_prepare
+	bindkey "^u" up_widget
 
 # home
 	function goto_home() { 
@@ -30,7 +13,7 @@
 		zle accept-line
 	}
 	zle -N goto_home
-	bindkey "^h" goto_home
+	bindkey "^o" goto_home
 
 # Edit and rerun
 	function edit_and_run() {
@@ -47,13 +30,6 @@
 	}
 	zle -N ctrl_l
 	bindkey "^l" ctrl_l
-
-# Enter
-	function enter_line() {
-		zle accept-line
-	}
-	zle -N enter_line
-	bindkey "^o" enter_line
 
 # Sudo
 	function add_sudo() {
