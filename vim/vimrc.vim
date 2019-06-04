@@ -24,6 +24,9 @@ set t_Co=256
 set autoindent
 set smartindent
 
+" Disable modeline feature as it is a giant security hole
+set nomodeline
+
 " make backspace act more sanely with tabs
 set backspace=indent,eol,start
 
