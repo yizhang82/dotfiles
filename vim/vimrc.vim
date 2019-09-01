@@ -196,6 +196,12 @@ Plug 'tpope/vim-sleuth'
 "-------------------------------------------------------------------------------
 Plug 'vim-scripts/Align'
 
+"-------------------------------------------------------------------------------
+" gocode: Go autocompletion plugin
+"-------------------------------------------------------------------------------
+Plug 'mdempsky/gocode', { 'rtp': 'nvim', 'do': '~/.config/nvim/plugged/gocode/nvim/symlink.sh' }
+
+
 " Initialize Plug system
 call plug#end()
 
