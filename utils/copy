@@ -8,8 +8,9 @@ else
     xclip -in -selection clipboard
   elif type "xsel" > /dev/null; then
     xsel --clipboard --input 
+  elif [ -f "$ext_tmux_copy" ]; then
+    $ext_tmux_copy
   else
-    print "clipcopy: Platform $OSTYPE not supported or xclip/xsel not installed" >&2
-    return 1
+    echo "clipcopy: Platform $OSTYPE not supported or xclip/xsel not installed" >&2
   fi
 fi
