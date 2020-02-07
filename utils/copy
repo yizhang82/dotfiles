@@ -4,9 +4,9 @@ if [[ "$OSTYPE" == darwin* ]]; then
 elif [[ "$OSTYPE" == cygwin* ]]; then
   cat > /dev/clipboard
 else
-  if type "xclip" > /dev/null; then
+  if type "xclip" &> /dev/null; then
     xclip -in -selection clipboard
-  elif type "xsel" > /dev/null; then
+  elif type "xsel" &> /dev/null; then
     xsel --clipboard --input 
   elif [ -f "$ext_tmux_copy" ]; then
     $ext_tmux_copy
