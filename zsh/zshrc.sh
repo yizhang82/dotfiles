@@ -51,15 +51,18 @@ source ~/dotfiles/zsh/plugins/fixls.zsh
 autoload -U compinit
 
 plugins=(
-	docker
+	autojump
 )
 
 for plugin ($plugins); do
+    echo loading "$plugin"...
     fpath=(~/dotfiles/zsh/plugins/oh-my-zsh/plugins/$plugin $fpath)
 done
 
 compinit
 
+export ZSH=~/dotfiles/zsh/plugins/oh-my-zsh
+source ~/dotfiles/zsh/plugins/oh-my-zsh/oh-my-zsh.sh
 source ~/dotfiles/zsh/plugins/oh-my-zsh/lib/history.zsh
 source ~/dotfiles/zsh/plugins/oh-my-zsh/lib/key-bindings.zsh
 source ~/dotfiles/zsh/plugins/oh-my-zsh/lib/completion.zsh
