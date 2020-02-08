@@ -55,7 +55,6 @@ plugins=(
 )
 
 for plugin ($plugins); do
-    echo loading "$plugin"...
     fpath=(~/dotfiles/zsh/plugins/oh-my-zsh/plugins/$plugin $fpath)
 done
 
