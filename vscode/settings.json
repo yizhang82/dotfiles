@@ -1,3 +1,5 @@
+    "vim.incsearch": true,
+    "vim.hlsearch": true,
     "vim.insertModeKeyBindings": [
         {
           "before": ["j", "j"],
