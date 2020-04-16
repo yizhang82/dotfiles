@@ -1,19 +1,24 @@
-// Place your key bindings in this file to override the defaults
-[
-    {
-        "key": "ctrl+l",
-        "command": "workbench.action.navigateRight"
-    },
-    {
-        "key": "ctrl+h",
-        "command": "workbench.action.navigateLeft"
-    },
-    {
-        "key": "ctrl+j",
-        "command": "workbench.action.navigateDown"
-    },
-    {
-        "key": "ctrl+k",
-        "command": "workbench.action.navigateUp"
-    },
-]
+    "vim.insertModeKeyBindings": [
+        {
+          "before": ["j", "j"],
+          "after": ["<Esc>"]
+        }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+          "before": ["<C-h>"],
+          "after": ["<C-w>", "h"]
+        },
+        {
+          "before": ["<C-l>"],
+          "after": ["<C-w>", "l"]
+        },
+        {
+          "before": ["<C-j>"],
+          "after": ["<C-w>", "j"]
+        },
+        {
+          "before": ["<C-k>"],
+          "after": ["<C-w>", "k"]
+        },
+    ],
