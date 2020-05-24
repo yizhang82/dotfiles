@@ -3,6 +3,8 @@ if [[ "$OSTYPE" == darwin* ]]; then
   pbcopy
 elif [[ "$OSTYPE" == cygwin* ]]; then
   cat > /dev/clipboard
+elif [[ -n "$WSLENV" ]]; then
+  clip.exe
 else
   if type "xclip" &> /dev/null; then
     xclip -in -selection clipboard
