@@ -9,7 +9,7 @@ else
   if type "xclip" &> /dev/null; then
     xclip -in -selection clipboard
   elif type "xsel" &> /dev/null; then
-    xsel --clipboard --input 
+    xsel --clipboard --input
   elif [ -f "$ext_tmux_copy" ]; then
     $ext_tmux_copy
   else
