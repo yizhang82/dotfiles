@@ -1,3 +1,4 @@
+{
     "vim.incsearch": true,
     "vim.hlsearch": true,
     "vim.insertModeKeyBindings": [
@@ -22,5 +23,6 @@
         {
           "before": ["<C-k>"],
           "after": ["<C-w>", "k"]
-        },
-    ],
+        }
+    ]
+}
