@@ -1,4 +1,22 @@
 {
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.fontSize": 16,
+    "window.zoomLevel": 0,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "C_Cpp.clang_format_fallbackStyle": "Google",
+    "C_Cpp.default.intelliSenseMode": "clang-x64",
+    "files.associations": {
+        "*.ic": "cpp"
+    },
+    "workbench.colorTheme": "Dracula",
+    "editor.minimap.enabled": false,
     "vim.incsearch": true,
     "vim.hlsearch": true,
     "vim.insertModeKeyBindings": [
@@ -23,6 +41,6 @@
         {
           "before": ["<C-k>"],
           "after": ["<C-w>", "k"]
-        }
-    ]
+        },
+    ],
 }
