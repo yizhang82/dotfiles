@@ -1,6 +1,8 @@
 # Vars
+        # This fix annoy git paging behavior
+        export LESS=-FRX
 	HISTFILE=~/.zsh_history
-	SAVEHIST=1000 
+	SAVEHIST=1000
 	setopt inc_append_history # To save every command before it is executed 
 	setopt share_history # setopt inc_append_history
 
@@ -9,7 +11,7 @@
 # Aliases
 	alias v="vim -p"
 	mkdir -p /tmp/log
-	
+
 	# This is currently causing problems (fails when you run it anywhere that isn't a git project's root directory)
 	# alias vs="v `git status --porcelain | sed -ne 's/^ M //p'`"
 
@@ -39,7 +41,7 @@ source ~/dotfiles/zsh/plugins/fixls.zsh
  	}
  	alias cd="c"
 
-# For vim mappings: 
+# For vim mappings:
 	stty -ixon
 
 # Completions
