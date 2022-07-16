@@ -1,0 +1,26 @@
+!_TAG_FILE_SORTED	2	/0=unsorted, 1=sorted, 2=foldcase/
+buf_set_keymap	/home/yzha/dotfiles/nvim/lua/lsp.lua	/^  local function buf_set_keymap(...)$/;"	f	language:Lua
+buf_set_option	/home/yzha/dotfiles/nvim/lua/lsp.lua	/^  local function buf_set_option(...)$/;"	f	language:Lua
+config 	/home/yzha/dotfiles/nvim/lua/plugins.lua	/^    config = function()$/;"	f	language:Lua
+config 	/home/yzha/dotfiles/nvim/lua/plugins.lua	/^    config = function()$/;"	f	language:Lua
+config 	/home/yzha/dotfiles/nvim/lua/plugins.lua	/^    config = function()$/;"	f	language:Lua
+config 	/home/yzha/dotfiles/nvim/lua/plugins.lua	/^    config = function()$/;"	f	language:Lua
+config 	/home/yzha/dotfiles/nvim/lua/plugins.lua	/^    config = function()$/;"	f	language:Lua
+config 	/home/yzha/dotfiles/nvim/lua/plugins.lua	/^    config = function()$/;"	f	language:Lua
+config 	/home/yzha/dotfiles/nvim/lua/plugins.lua	/^    config = function()$/;"	f	language:Lua
+config 	/home/yzha/dotfiles/nvim/lua/plugins.lua	/^    config = function()$/;"	f	language:Lua
+config 	/home/yzha/dotfiles/nvim/lua/plugins.lua	/^    config = function()$/;"	f	language:Lua
+config 	/home/yzha/dotfiles/nvim/lua/plugins.lua	/^    config = function()$/;"	f	language:Lua
+config 	/home/yzha/dotfiles/nvim/lua/plugins.lua	/^    config = function()$/;"	f	language:Lua
+config 	/home/yzha/dotfiles/nvim/lua/plugins.lua	/^    config = function()$/;"	f	language:Lua
+config 	/home/yzha/dotfiles/nvim/lua/plugins.lua	/^    config = function()$/;"	f	language:Lua
+custom_actions.multi_selection_open	/home/yzha/dotfiles/nvim/lua/plugins.lua	/^      function custom_actions.multi_selection_open(prompt_bufnr)$/;"	f	language:Lua
+custom_actions.multi_selection_open_split	/home/yzha/dotfiles/nvim/lua/plugins.lua	/^      function custom_actions.multi_selection_open_split(prompt_bufnr)$/;"	f	language:Lua
+custom_actions.multi_selection_open_tab	/home/yzha/dotfiles/nvim/lua/plugins.lua	/^      function custom_actions.multi_selection_open_tab(prompt_bufnr)$/;"	f	language:Lua
+custom_actions.multi_selection_open_vsplit	/home/yzha/dotfiles/nvim/lua/plugins.lua	/^      function custom_actions.multi_selection_open_vsplit(prompt_bufnr)$/;"	f	language:Lua
+custom_actions._multiopen	/home/yzha/dotfiles/nvim/lua/plugins.lua	/^      function custom_actions._multiopen(prompt_bufnr, open_cmd)$/;"	f	language:Lua
+expand 	/home/yzha/dotfiles/nvim/lua/plugins.lua	/^          expand = function(args)$/;"	f	language:Lua
+format 	/home/yzha/dotfiles/nvim/lua/lsp.lua	/^      format = function(diagnostic)$/;"	f	language:Lua
+local on_attach 	/home/yzha/dotfiles/nvim/lua/lsp.lua	/^local on_attach = function(client, bufnr)$/;"	f	language:Lua
+["<S-Tab>"] 	/home/yzha/dotfiles/nvim/lua/plugins.lua	/^          ["<S-Tab>"] = function(fallback)$/;"	f	language:Lua
+["<Tab>"] 	/home/yzha/dotfiles/nvim/lua/plugins.lua	/^          ["<Tab>"] = function(fallback)$/;"	f	language:Lua
