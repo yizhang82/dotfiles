@@ -153,12 +153,6 @@ Plug 'jistr/vim-nerdtree-tabs'
 nmap <silent> <leader>t :NERDTreeTabsToggle<CR>
 
 "-------------------------------------------------------------------------------
-" BetterWhitespace: hilights trailing whitespace, as well as double newlines.
-" Also provides the StripWhitespace command I use elsewhere to clean up files.
-"-------------------------------------------------------------------------------
-Plug 'ntpeters/vim-better-whitespace'
-
-"-------------------------------------------------------------------------------
 " Status bar
 "-------------------------------------------------------------------------------
 Plug 'itchyny/lightline.vim'
