@@ -4,6 +4,9 @@ autoload -U colors && colors
 
 setopt PROMPT_SUBST
 
+# Let this prompt render the active virtualenv instead of activate's own prefix
+export VIRTUAL_ENV_DISABLE_PROMPT=1
+
 set_prompt() {
 
 	PS1="%{$fg[white]%}"
@@ -26,6 +29,14 @@ set_prompt() {
 	if git rev-parse --is-inside-work-tree 2> /dev/null | grep -q 'true' ; then
 		PS1+=', '
 		PS1+="%{$fg[blue]%}$(git rev-parse --abbrev-ref HEAD 2> /dev/null)%{$reset_color%}"
+	fi
+
+	# Virtualenv (uv/python): show project folder name when env is `.venv`, else env name
+	if [[ -n "$VIRTUAL_ENV" ]]; then
+		local _venv=${VIRTUAL_ENV:t}
+		[[ "$_venv" == ".venv" ]] && _venv=${VIRTUAL_ENV:h:t}
+		PS1+=', '
+		PS1+="%{$fg[green]%}env:$_venv%{$reset_color%}"
 	fi
 
 
