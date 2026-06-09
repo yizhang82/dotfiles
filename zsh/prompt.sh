@@ -11,9 +11,9 @@ set_prompt() {
 
 	PS1="%{$fg[white]%}"
 
-	# [machine_name]
+	# [user@host]
 	PS1+="[%{$reset_color%}"
-	PS1+="%{$fg[cyan]%}%m"
+	PS1+="%{$fg[yellow]%}%n@%m"
 	PS1+="%{$fg[white]%}]"
 
 	# [08/31, 12:00:03]
